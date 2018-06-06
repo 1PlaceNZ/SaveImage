@@ -5,7 +5,8 @@
         "id": "cordova-plugin-save-image",
         "platforms": [
             "ios",
-            "android"
+            "android",
+            "windows"
         ]
     },
     "description": "This plugin allows you to save an image file to the iOS Photo Library or Android Gallery.",
@@ -22,12 +23,14 @@
         "cordova",
         "ecosystem:cordova",
         "cordova-ios",
-        "cordova-android"
+        "cordova-android",
+        "cordova-windows"
     ],
     "engines": {
         "cordovaDependencies": {
             "3.0.0": {
-                "cordova-android": ">=6.3.0"
+                "cordova-android": ">=6.3.0",
+                "cordova-windows": ">=6.0.0"
             },
             "4.0.0": {
                 "cordova": ">100"

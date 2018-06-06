@@ -4,7 +4,7 @@
         version="0.3.0">
 
     <name>SaveImage</name>
-    <description>This plugin allows you to save an image to the iOS Camera roll / Photo Library or Android Gallery.</description>
+    <description>This plugin allows you to save an image to the iOS Camera roll / Photo Library or Android Gallery or Windows UWP Picture Folder.</description>
     <license>MIT</license>
     <author>Quiply Technologies GmbH - hello@quiply.com</author>
     <keywords>image,photo library,camera roll,gallery,image gallery</keywords>
@@ -44,6 +44,13 @@
 
         <header-file src="src/ios/SaveImage.h"/>
         <source-file src="src/ios/SaveImage.m" compiler-flags="-fno-objc-arc"/>
+    </platform>
+
+    <!-- windows -->
+    <platform name="windows">
+        <js-module src="src/windows/saveImageProxy.js" name="SaveImageProxy">
+            <merges target="" />
+        </js-module>
     </platform>
 
 </plugin>

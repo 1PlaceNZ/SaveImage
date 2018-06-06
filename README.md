@@ -50,6 +50,7 @@ Call the `window.cordova.plugins.imagesaver.saveImageToGallery()` method passing
 // iOS without file prefix: var nativePathToJpegImage = '/var/mobile/Containers/Data/Application/<UUID>/Library/NoCloud/some_dir/some_image.jpg'
 // Android with file prefix: var nativePathToJpegImage = 'file:///data/data/<package_name>/files/some_dir/some_image.jpg'
 // Android without file prefix: var nativePathToJpegImage = '/data/data/<package_name>/files/some_dir/some_image.jpg'
+// Windows with file prefix: var nativePathToJpegImage = ms-appdata:///local/some_dir/some_image.jpg
 
 window.cordova.plugins.imagesaver.saveImageToGallery(nativePathToJpegImage, onSaveImageSuccess, onSaveImageError);
                                             
@@ -98,6 +99,10 @@ To add these entries into the `info.plist`, you can use the `edit-config` tag in
 </edit-config>
 ```
 
+
+## Windows Quirks
+
+YOu need to add the Pictures Library Capabilities to the appxmanifest file 
 
 ## License
 
